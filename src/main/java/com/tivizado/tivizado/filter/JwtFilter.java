@@ -31,8 +31,8 @@ public class JwtFilter extends GenericFilterBean {
             filterChain.doFilter(request, response);
         } else {
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                System.out.println("Error bearer");
-                throw new ServletException("An exception occurred");
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Bearer Token not found.");
+                return;
             }
         }
 

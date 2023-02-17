@@ -17,9 +17,9 @@ public class AppBootStrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        User user1 = new User("Jack", "pass123");
-        User user2 = new User("Alice","pass123");
+        /* User user1 = new User("Jack", "pass123");
+        User user2 = new User("leandro", "asd123");
         userRepository.save(user1);
-        userRepository.save(user2);
+        userRepository.save(user2); */
     }
 }
